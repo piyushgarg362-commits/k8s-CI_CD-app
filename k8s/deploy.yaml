@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: k8s-cicd-app
-          image: mohamedelaassal/lzz_repo:latest
+          image: piyushgarg949/k8s-student-app:latest
           ports:
             - containerPort: 3000
