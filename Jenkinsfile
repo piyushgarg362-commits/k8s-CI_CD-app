@@ -65,9 +65,8 @@ pipeline {
             steps {
                 script {
                     withCredentials([file(credentialsId: 'kubeconfig-student-cluster', variable: 'KUBECONFIG')]) {
-                        bat 'kubectl apply -f k8s/deploy.yaml'
-                        bat 'kubectl apply -f k8s/service.yaml'
-                        //for linux use sh instead of bat
+                        sh 'kubectl apply -f k8s/deploy.yaml'
+                        sh 'kubectl apply -f k8s/service.yaml'
                     }
                 }
             }
